@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        margin: auto;
+        margin-top: 10%;
+        border: 2px solid black;
+        width: 50%;
+        min-height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 15px;
+      }
+      .box {
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box1" onclick="getcolor('box1')"></div>
+      <div class="box" id="box2" onclick="getcolor('box2')"></div>
+      <div class="box" id="box3" onclick="getcolor('box3')"></div>
+      <div class="box" id="box4" onclick="getcolor('box4')"></div>
+      <div class="box" id="box5" onclick="getcolor('box5')"></div>
+      <div class="box" id="box6" onclick="getcolor('box6')"></div>
+      <div class="box" id="box7" onclick="getcolor('box7')"></div>
+      <div class="box" id="box8" onclick="getcolor('box8')"></div>
+      <div class="box" id="box9" onclick="getcolor('box9')"></div>
+    </div>
+    <script>
+
+      function changecolor() {
+        const nodeList = document.querySelectorAll(".box");
+        for (let i = 0; i < nodeList.length; i++) {
+          nodeList[i].style.backgroundColor = "white";
+        }
+      }
+      function getcolor(e) {
+        changecolor();
+        document.getElementById(e).style.backgroundColor = "red";
+      }
+    </script>
+  </body>
+</html>
